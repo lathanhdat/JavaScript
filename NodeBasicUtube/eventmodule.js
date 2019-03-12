@@ -30,4 +30,4 @@ pedro.on('name',()=>{
 });
 
 pedro.emit('name');
-christina.emit('name'); //Event occured synchronously (Tuan tu)
+christina.emit('name'); //Event occured synchronously
