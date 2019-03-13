@@ -9,6 +9,11 @@ const server = http.createServer((req,res)=>{
         res.write('Hello from nodejs');
         res.end;
     }
+    else
+    {
+        res.write('using some other url');
+        res.end;
+    }
 });
 server.listen(port,hostname,() =>
 {
