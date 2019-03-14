@@ -19,7 +19,7 @@ console.log(z);
 
 //ES6
 let x = 1;
-let x = 3; => //We can't redeclare varialbe
+let x = 3; //We can't redeclare varialbe
 
 //Scope
 let x =1;
@@ -38,4 +38,4 @@ console.log(add1(3));
 //Hoisting
 console.log(nothoisted);
 //Temporal dead zone
-let nothoisted; => //Can't hoisting
+let nothoisted; //Can't hoisting
