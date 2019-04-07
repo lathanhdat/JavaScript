@@ -1,3 +1,8 @@
+/*
+    Fucntion is an instance of Object so that we can do anything we do 
+    with Object for a function
+*/
+
 var year = [1990,1965,1937,2005,1998];
 
 console.log(year);

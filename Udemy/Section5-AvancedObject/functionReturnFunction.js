@@ -24,7 +24,10 @@ function interviewQuestion(job)
 }
 
 var teacherQuestion = interviewQuestion('teacher');
+//teacherQuestion is now be function(name) {console.log(name + ', what subject do you teach?');}
 teacherQuestion('John');
 
 var designerQuestion = interviewQuestion('designer');
 designerQuestion('Jane');
+
+interviewQuestion('teacher')('Mars');
