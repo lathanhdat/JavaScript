@@ -68,7 +68,12 @@ var UIModule = (function(){
     inputDescription : '.add__description',
     inputButton : '.add__btn',
     incomeContainer : '.income__list',
-    expenseContainer : '.expenses__list'
+    expenseContainer : '.expenses__list',
+    budgetLabel : '.budget__value',
+    budgetIncom : '.budget__income--value',
+    budgetExpenses: '.budget__expenses--value',
+    budgetIncomPercent:'.budget__income--percentage',
+    budgetExpensesPercent:'.budget__expenses--percentage'
   }
   return {
     getInput : function(){
@@ -110,6 +115,18 @@ var UIModule = (function(){
         field.value = '';
       })
     },
+    displayBudget: function(obj){
+      document.querySelector(DOMstrings.budgetLabel).textContent = obj.budget;
+      document.querySelector(DOMstrings.budgetIncom).textContent = obj.totals.inc;
+      document.querySelector(DOMstrings.budgetExpenses).textContent = obj.totals.exp;
+      if(obj.percentage >0){
+        document.querySelector(DOMstrings.budgetExpensesPercent).textContent = obj.percentage + '%';
+      }
+      else{
+        document.querySelector(DOMstrings.budgetExpensesPercent).textContent = '---';
+      }
+
+    },
     getDOMstrings : function(){
       return DOMstrings;
     }
@@ -128,7 +145,7 @@ var controller = (function(budgetController,UIController){
   };
   var updateBudget = function(){
     budgetController.calculateBudget();
-    console.log(budgetController.data);
+    UIController.displayBudget(budgetController.data);
 
   }
   var addItem = function(){
@@ -154,6 +171,7 @@ var controller = (function(budgetController,UIController){
   return {
     init : function(){
       setupEventListener();
+      UIController.displayBudget(budgetController.data);
     }
   }
   
