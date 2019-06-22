@@ -1,6 +1,8 @@
 var names = ['John', 'Mark', 'James']; //Regular
 var years = new Array(1995,1996,1993); //Not regular
 
+console.log(names[0]);
+
 names[5] = 'Marry';
 
 console.log(names);

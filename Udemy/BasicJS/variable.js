@@ -5,7 +5,7 @@ var lastName = 'Smith';
 var age = 28;
 var isMarried = false;
 //Joining string
-console.log(lastName + '' +age);
+console.log(lastName + ' ' +age);
 console.log('Is '+ firstName + ' married? ' + isMarried);
 alert('Hellooo');
 
@@ -24,4 +24,3 @@ var $3year;
 //Input a value:
 var lastofName = prompt('What is your last name?');
 console.log(firstName + '' + lastofName);
- 
